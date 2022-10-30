@@ -50,7 +50,7 @@
                     <li><a class="nav-link scrollto" href="index.html">Home</a></li>
                     <li><a class="nav-link scrollto" href="about.html">About</a></li>
                     <li><a class="nav-link scrollto" href="groupdiary.html">Group Diary</a></li>
-                    <li><a class="nav-link scrollto " href="project.html">Project</a></li>
+                    <li><a class="nav-link scrollto active" href="project.html">Project</a></li>
                     <li><a class="nav-link scrollto " href="technical.html">Technical</a></li>
                     <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -89,7 +89,7 @@
     <main id="main">
         <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')">Requirment</button>
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Requirment</button>
             <button class="tablinks" onclick="openCity(event, 'Paris')">Design</button>
             <button class="tablinks" onclick="openCity(event, 'Tokyo')">Implement</button>
         </div>
@@ -248,7 +248,11 @@
             // Show the current tab, and add an "active" class to the button that opened the tab
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
+
+
         }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
     </script>
 
     <!-- Template Main JS File -->
