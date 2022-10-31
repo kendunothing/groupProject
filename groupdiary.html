@@ -87,71 +87,90 @@
         <div class="hero-container">
             <h1>Group Diary</h1>
             <p style="color:white;">HCI2023 group 13</p>
-                <a href="#about" class="btn-get-started scrollto">Our project</a>
+            <a href="#about" class="btn-get-started scrollto">Our project</a>
         </div>
     </section><!-- End Hero -->
 
     <main id="main">
         <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')">Week 1</button>
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Week 1</button>
             <button class="tablinks" onclick="openCity(event, 'Paris')">Week 2</button>
             <button class="tablinks" onclick="openCity(event, 'Tokyo')">Week 3</button>
         </div>
 
         <!-- Tab content -->
         <!--Week 1-->
-        <div id="London" class="tabcontent">      
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th>Number</th>
-                    <th>ID</th>
-                    <th>Full name</th>
-                    <th>Progress</th>
-                    <th>Result</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>21130350</td>
-                    <td>Phan Phước Hậu</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>21130399</td>
-                    <td>Đỗ Nhật Khoa</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>21130323</td>
-                    <td>Lâm Chí Dũng</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>21130365</td>
-                    <td>Đỗ Quốc Hưng</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>18130106</td>
-                    <td>Đặng Quốc Khánh</td>
-                </tr>
+        <div id="London" class="tabcontent">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>ID</th>
+                        <th>Full name</th>
+                        <th>Works</th>
+                        <th>Progress</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>21130350</td>
+                        <td>Phan Phước Hậu</td>
+                        <td>Lên ý tưởng, phân công công việc cho group.
+                            <br>
+                            Làm phần tạo hosting firebase.
+                        </td>
+                        <td>100%</td>
+                        <td>Hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>21130399</td>
+                        <td>Đỗ Nhật Khoa</td>
+                        <td>Tìm kiếm template.</td>
+                        <td>100%</td>
+                        <td>Hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>21130323</td>
+                        <td>Lâm Chí Dũng</td>
+                        <td>Làm phần tạo domain. </td>
+                        <td>100%</td>
+                        <td>Hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>21130365</td>
+                        <td>Đỗ Quốc Hưng</td>
+                        <td>Làm phần deploy firebase.</td>
+                        <td>100%</td>
+                        <td>Hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>18130106</td>
+                        <td>Đặng Quốc Khánh</td>
+                        <td>Làm phần deploy firebase.</td>
+                        <td>100%</td>
+                        <td>Hoàn thành</td>
+                    </tr>
 
 
-                <!-- and so on... -->
-            </tbody>
-        </table>
+                    <!-- and so on... -->
+                </tbody>
+            </table>
 
         </div>
 
         <div id="Paris" class="tabcontent">
- ##
+            ##
         </div>
 
         <div id="Tokyo" class="tabcontent">
-##
+            ##
         </div>
     </main><!-- End #main -->
 
@@ -234,6 +253,8 @@
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
     </script>
 
     <!-- Template Main JS File -->

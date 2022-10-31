@@ -94,7 +94,8 @@
     <main id="main">
         <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" id="create" onclick="openCity(event, 'London')">Create Project</button>
+            <button class="tablinks" id="create" onclick="openCity(event, 'London')" id="defaultOpen">Create
+                Project</button>
             <button class="tablinks" id="deploy" onclick="openCity(event, 'Paris')">Deploy Firebase</button>
             <button class="tablinks" id="domain" onclick="openCity(event, 'Tokyo')">Create Domain</button>
         </div>
@@ -335,6 +336,8 @@
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
     </script>
 
     <!-- Template Main JS File -->
